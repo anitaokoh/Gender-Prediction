@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gender Prediction</title>
+  <link rel="stylesheet" href="static/home.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: #003f5c;">
+    <a class="navbar-brand" href="#">
+      <h4><span class="highlight">Gender Prediction App</span></h4>
+    </a>
+    <!-- <img src="" alt="hypepperameter" id="logo"> -->
+    <!-- <h3>Gender Prediction App</h3> -->
+    </a>
+  </nav>
+  <section class="main-splash">
+    <div class="container" id="texts">
+      <div class="my-7">
+        <!-- <section class="main-splash"> -->
+        <!-- <div> -->
+        <!-- <h1> Gender Prediction App </h1> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2> We would like to predict your gender based on preference</h2>
+
+        <p> Fill the form below and submit </p>
+        <small class='one'> Please note that this is an improvement model that has an accuracy score of 70% so if we are not able to predict your gender correctly, let us know </small>
+
+        <br>
+        <br>
+        <form class="needs-validated" action="/result" method="GET">
+          <!-- <div class="form-row"> -->
+          <div class="row">
+            <div class="form-group col-md-6">
+              <p> <b>1. Favourite Colour Category</b></p>
+              <select class="custom-select" name="colour" required>
+                <option value="">Open this select menu</option>
+                <option value="{{COLOUR[0]}}">{{COLOUR[0]}}</option>
+                <option value="{{COLOUR[1]}}">{{COLOUR[1]}}</option>
+                <option value="{{COLOUR[2]}}">{{COLOUR[2]}}</option>
+              </select>
+              <div class="invalid-feedback">Required</div>
+            </div>
+            <br>
+            <br>
+            <!-- <p> 2.  Favourite Music Genre</p> -->
+            <div class="form-group col-md-6">
+              <!-- <div class="col" > -->
+              <p><b> 2. Favourite Music Genre</b></p>
+              <!-- <label for="inputZip">Zip</label> -->
+              <select class="custom-select" name="music" required>
+                <option value="">Open this select menu</option>
+                <option value="{{MUSIC[0]}}">{{MUSIC[0]}}</option>
+                <option value="{{MUSIC[1]}}">{{MUSIC[1]}}</option>
+                <option value="{{MUSIC[2]}}">{{MUSIC[2]}}</option>
+                <option value="{{MUSIC[3]}}">{{MUSIC[3]}}</option>
+                <option value="{{MUSIC[4]}}">{{MUSIC[4]}}</option>
+                <option value="{{MUSIC[5]}}">{{MUSIC[5]}}</option>
+                <option value="{{MUSIC[6]}}">{{MUSIC[6]}}</option>
+              </select>
+              <div class="invalid-feedback">Required</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <p><b> 3. Favourite Alcohol Beverage</b></p>
+              <select class="custom-select" name="alcohol" required>
+                <option value="">Open this select menu</option>
+                <option value="{{ALCOHOL[0]}}">{{ALCOHOL[0]}}</option>
+                <option value="{{ALCOHOL[1]}}">{{ALCOHOL[1]}}</option>
+                <option value="{{ALCOHOL[2]}}">{{ALCOHOL[2]}}</option>
+                <option value="{{ALCOHOL[3]}}">{{ALCOHOL[3]}}</option>
+                <option value="{{ALCOHOL[4]}}">{{ALCOHOL[4]}}</option>
+                <option value="{{ALCOHOL[5]}}">{{ALCOHOL[5]}}</option>
+              </select>
+              <div class="invalid-feedback">Required</div>
+              <br>
+              <br>
+              <p class='one'> If beverage is others, specify</p>
+              <input type="text" class="form-control" name="Alcohol_others" placeholder="What is your alcohol poison? ">
+            </div>
+
+            <div class="form-group col-md-6">
+              <p><b> 4. Favourite Soft Drink</b></p>
+              <select class="custom-select" name="soft_drink" required>
+                <option value="">Open this select menu</option>
+                <option value="{{SOFT_DRINK[0]}}">{{SOFT_DRINK[0]}}</option>
+                <option value="{{SOFT_DRINK[1]}}">{{SOFT_DRINK[1]}}</option>
+                <option value="{{SOFT_DRINK[2]}}">{{SOFT_DRINK[2]}}</option>
+                <option value="{{SOFT_DRINK[3]}}">{{SOFT_DRINK[3]}}</option>
+              </select>
+              <div class="invalid-feedback">Required</div>
+              <br>
+              <br>
+              <p class='one'> If soft drink is others, specify</p>
+              <input type="text" class="form-control" name="soft_others" placeholder="What type of soft drink? ">
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="my-3 row justify-content-center">
+
+            <button type="submit" class="btn btn-primary btn-lg" id="btn">Predict my Gender</button>
+          </div>
+
+        </form>
+        <!-- </div> -->
+      </div>
+    </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
