@@ -1,4 +1,4 @@
-# gender_prediction
+# Gender prediction App
 
 This is web app powered by flask and Heroku  that predicts gender based on preference. The model that had the higher accuracy score was the CATboost model which was saved and used underneath the app to predict.
 
