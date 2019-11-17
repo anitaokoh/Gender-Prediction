@@ -14,5 +14,8 @@ Here is a demo of the app.
 
 
 
+
+_Check out the app using this [link](https://genderpred.herokuapp.com/)_
+
 Further retraining will be done in the future as more data is accumulated.
 
